@@ -1,0 +1,31 @@
+<suite name="First Suite" verbose="1" >
+    <test name="testOne" >
+        <groups>
+            <run>
+                <include name="testOne" />
+            </run>
+        </groups>
+        <classes>
+            <class name="selenium_testing3.test" >
+                <methods>
+                    <include name="testOneMethod"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="testTwo" >
+        <groups>
+            <run>
+                <include name="testTwo" />
+            </run>
+        </groups>
+
+        <classes>
+            <class name="selenium_testing3.test" >
+                <methods>
+                    <include name="testTwoMethod"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
