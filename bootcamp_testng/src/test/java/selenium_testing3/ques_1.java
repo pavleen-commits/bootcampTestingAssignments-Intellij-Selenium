@@ -28,7 +28,7 @@ public class ques_1 {
         System.out.println("Static Salary is " +str);
 
 
-        //Dynamic Approach
+        //Dynamic Approach -1
         //String title = "Software Development Engineer in Test" ;
         String title = "Quality Assurance Engineer" ;
         WebElement table = driver.findElement(By.xpath("//*[@id=\"post-909\"]//div[5]/div/table//tbody"));
@@ -42,6 +42,13 @@ public class ques_1 {
                 System.out.println("Dynamic Salary is " +columns.get(2).getText());
             }
         }
+
+
+        //Dynamic Approach -2
+        String text="Quality";
+        WebElement value = driver.findElement(By.xpath("(//table)[2]//tr//td[contains(text(), text)]//following-sibling::td[2]"));
+        String rowText=value.getText();
+        System.out.println(rowText);
         driver.close();
 
     }
