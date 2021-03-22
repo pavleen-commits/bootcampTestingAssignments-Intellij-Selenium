@@ -56,7 +56,7 @@ public class ques_4 {
     }
 
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun=true)
     public void beforeMethod(){
         System.out.println("Before Method");
     }

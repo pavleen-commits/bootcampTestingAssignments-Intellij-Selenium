@@ -38,7 +38,7 @@ public class ques_1 {
             //System.out.println(rows.get(i).getText());
             //System.out.println(columns.get(0).getText());
             if(columns.get(0).getText().equals(title)){
-                //System.out.println("Hello");
+
                 System.out.println("Dynamic Salary is " +columns.get(2).getText());
             }
         }
@@ -46,7 +46,7 @@ public class ques_1 {
 
         //Dynamic Approach -2
         String text="Quality";
-        WebElement value = driver.findElement(By.xpath("(//table)[2]//tr//td[contains(text(), text)]//following-sibling::td[2]"));
+        WebElement value = driver.findElement(By.xpath("(//table)[2]//tr//td[contains(text(),'" + text + "')]//following-sibling::td[2]"));
         String rowText=value.getText();
         System.out.println(rowText);
         driver.close();

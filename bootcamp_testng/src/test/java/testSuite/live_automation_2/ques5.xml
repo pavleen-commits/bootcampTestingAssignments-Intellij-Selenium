@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Live Automation Day 2" verbose="1" >
+    <test name="Question 2 ">
+        <classes>
+            <class name="live_automation_2.Ques_5" >
+                <methods>
+                    <exclude name="register"/>
+                    <exclude name="login"/>
+                    <exclude name="customer"/>
+                    <exclude name="flight"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Ques 4 Test Suite" verbose="1" >
+    <test name="ZFirst Test ">
+        <packages>
+            <package name=".*">
+                <include name="selenium_testing3" />
+            </package>
+        </packages>
+        <classes>
+        <class name="selenium_testing3.ques_4" >
+            <methods>
+                <include name="testOneMethod"/>
+                <include name="testTwoMethod"/>
+            </methods>
+        </class>
+    </classes>
+</test>
+    <test name="Second Test ">
+        <packages>
+            <package name=".*">
+                <include name="selenium_testing3" />
+            </package>
+        </packages>
+        <classes>
+            <class name="selenium_testing3.ques_4" >
+                <methods>
+                    <include name="testOneMethod"/>
+                    <include name="testTwoMethod"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+<!-- While running group tests, before & after annotations are skipped:
+    1: use @BeforeClass(alwaysRun=true)
+    2. add group names with annotations !-->
+
+    <test name="GroupTest ">
+    <groups>
+        <run>
+            <include name="testOne" />
+        </run>
+    </groups>
+        <packages>
+            <package name=".*">
+                <include name="selenium_testing3" />
+            </package>
+        </packages>
+        <classes>
+        <class name="selenium_testing3.ques_4" >
+        <methods>
+        <include name="testOneMethod"/>
+        </methods>
+        </class>
+        </classes>
+    </test>
+</suite>
